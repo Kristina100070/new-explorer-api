@@ -1,0 +1,17 @@
+module.exports = {
+  SERVER_ERROR: 'Ошибка на сервере',
+  MAIL_ADDRESS_BUSY: 'Такой пользователь уже есть',
+  LINE_LENGTH: 'Длина стоки от 2 до 30 символов',
+  INCORRECT_EMAIL: 'Неверный почтовый адрес',
+  INCORRECT_PASSWORD: 'Неверный пароль',
+  REQUIRED_FIELD: 'Обязательное поле',
+  INPUT_URL: 'Введите URL',
+  NOT_FOUND_SAVE_ARTICLES: 'У вас нет сохраненных статей',
+  NOT_FOUND_ARTICLE: 'Статьи не существует',
+  IMPOSSIBLE_ACTION: 'Недостаточно прав для совершения данного действия',
+  SUCCESSFUL_REGISTRATION: 'Пользователь успешно зарегистирован',
+  NOT_FOUND_USER: 'Такого пользователя не существует',
+  NEED_AUTHORIZATION: 'Необходима авторизация',
+  MISMATCH_REQUEST: 'Неправильные почта или пароль',
+  NOT_FOUND_RESOURCE: 'Запрашиваемый ресурс не найден',
+};
