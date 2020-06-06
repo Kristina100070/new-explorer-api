@@ -1,11 +1,11 @@
 /* eslint-disable no-undef */
 const bcrypt = require('bcryptjs');
-
 const jwt = require('jsonwebtoken');
 const userModel = require('../models/user');
 const { JWT_SECRET } = require('../config/index');
 const BadRequestError = require('../errors/bad-request');
-const Conflict = require('../errors/conflict');
+
+const Conflict = require('../errors/сonflict');
 
 const {
   INCORRECT_PASSWORD,
@@ -30,9 +30,8 @@ const createUser = (req, res, next) => {
     })
     .catch((err) => {
       if (err.name === 'MongoError') {
-        throw new Conflict(MAIL_ADDRESS_BUSY);
+        next(new Conflict(MAIL_ADDRESS_BUSY));
       }
-      next();
     });
 };
 const login = (req, res, next) => {
