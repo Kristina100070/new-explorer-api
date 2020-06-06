@@ -21,7 +21,6 @@ const userCreateValidator = celebrate({
       .required()
       .error(new BadRequestError(INCORRECT_EMAIL)),
     password: Joi.string()
-      .pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/)
       .min(8)
       .required()
       .error(new BadRequestError(INCORRECT_PASSWORD)),

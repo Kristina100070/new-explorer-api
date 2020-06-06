@@ -5,10 +5,13 @@ const jwt = require('jsonwebtoken');
 const userModel = require('../models/user');
 const { JWT_SECRET } = require('../config/index');
 const BadRequestError = require('../errors/bad-request');
+const Conflict = require('../errors/conflict');
+
 const {
   INCORRECT_PASSWORD,
   SUCCESSFUL_REGISTRATION,
   NOT_FOUND_USER,
+  MAIL_ADDRESS_BUSY,
 } = require('../errors-message/errors-message');
 
 const createUser = (req, res, next) => {
@@ -25,7 +28,12 @@ const createUser = (req, res, next) => {
     .then(() => {
       res.status(201).send({ message: SUCCESSFUL_REGISTRATION });
     })
-    .catch(next);
+    .catch((err) => {
+      if (err.name === 'MongoError') {
+        throw new Conflict(MAIL_ADDRESS_BUSY);
+      }
+      next();
+    });
 };
 const login = (req, res, next) => {
   const { email, password } = req.body;
