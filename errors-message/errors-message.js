@@ -3,7 +3,7 @@ module.exports = {
   MAIL_ADDRESS_BUSY: 'Такой пользователь уже есть',
   LINE_LENGTH: 'Длина стоки от 2 до 30 символов',
   INCORRECT_EMAIL: 'Неверный почтовый адрес',
-  INCORRECT_PASSWORD: 'Неверный пароль',
+  INCORRECT_PASSWORD: 'Неверный пароль: должен содержать минимум одну цифру, строчную и прописную букву латинского алфавита',
   REQUIRED_FIELD: 'Обязательное поле',
   INPUT_URL: 'Введите URL',
   NOT_FOUND_SAVE_ARTICLES: 'У вас нет сохраненных статей',

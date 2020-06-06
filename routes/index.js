@@ -13,6 +13,7 @@ router.post('/signin', loginValidator, login);
 router.post('/signup', userCreateValidator, createUser);
 
 router.use(auth);
+
 router.use('/articles', articles);
 router.use('/users', users);
 router.use('*', (req, res, next) => {
