@@ -49,7 +49,7 @@ const articleCreateValidator = celebrate({
       .required().error(new BadRequestError(REQUIRED_FIELD)),
     text: Joi.string()
       .required().error(new BadRequestError(REQUIRED_FIELD)),
-    data: Joi.string()
+    date: Joi.string()
       .required().error(new BadRequestError(REQUIRED_FIELD)),
     source: Joi.string()
       .required().error(new BadRequestError(REQUIRED_FIELD)),
