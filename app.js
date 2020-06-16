@@ -16,7 +16,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 
 const app = express();
-
+app.use(cors());
 
 mongoose.connect(MONGO_IP, {
   useNewUrlParser: true,
@@ -31,7 +31,7 @@ app.use(requestLogger);
 app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors());
+
 app.use(router);
 
 app.use(errorLogger);
