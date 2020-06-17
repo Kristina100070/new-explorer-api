@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 
-
+const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
@@ -16,7 +16,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const app = express();
 
-
+app.use(cors());
 mongoose.connect(MONGO_IP, {
   useNewUrlParser: true,
   useCreateIndex: true,
