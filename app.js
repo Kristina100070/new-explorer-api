@@ -16,7 +16,11 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: 'http://localhost:8080',
+  credentials: true,
+};
+app.use(cors(corsOptions));
 mongoose.connect(MONGO_IP, {
   useNewUrlParser: true,
   useCreateIndex: true,
