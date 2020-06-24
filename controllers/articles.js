@@ -40,9 +40,8 @@ const deleteArticle = (req, res, next) => {
       if (article.owner.toString() !== req.user._id) {
         throw new Forbidden(IMPOSSIBLE_ACTION);
       }
-      articleModel.findOne(article)
-        // eslint-disable-next-line no-shadow
-        .then((article) => res.status(200).send({ data: article }));
+      return articleModel.deleteOne(article)
+        .then(() => res.status(200).send({ message: 'Статья удалена', data: article }));
     })
     .catch(next);
 };

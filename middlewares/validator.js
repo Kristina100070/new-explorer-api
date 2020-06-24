@@ -63,7 +63,6 @@ const articleCreateValidator = celebrate({
   }),
 });
 
-
 module.exports = {
   userCreateValidator,
   loginValidator,

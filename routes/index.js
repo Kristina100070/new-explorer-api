@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const router = require('express').Router();
 const users = require('./users.js');
 const articles = require('./articles.js');
