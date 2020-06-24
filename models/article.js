@@ -1,6 +1,5 @@
 
 const mongoose = require('mongoose');
-// eslint-disable-next-line no-undef
 const validator = require('validator');
 
 const articleSchema = new mongoose.Schema({
