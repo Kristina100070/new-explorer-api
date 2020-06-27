@@ -17,7 +17,10 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const app = express();
 
 const corsOptions = {
-  origin: 'http://localhost:8080',
+  origin: [
+    'http://localhost:8080',
+    'https://Kristina100070.github.io',
+  ],
   credentials: true,
 };
 app.use(cors(corsOptions));
