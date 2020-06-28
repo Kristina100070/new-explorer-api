@@ -19,7 +19,7 @@ const app = express();
 const corsOptions = {
   origin: [
     'http://localhost:8080',
-    'https://Kristina100070.github.io',
+    'https://kristina100070.github.io',
   ],
   credentials: true,
 };
