@@ -20,6 +20,7 @@ const corsOptions = {
   origin: [
     'http://localhost:8080',
     'https://kristina100070.github.io',
+    'https://news-explorer82.ru',
   ],
   credentials: true,
 };
